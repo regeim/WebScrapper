@@ -1,15 +1,15 @@
 [
 	{
 		"name": "Human or Void Elf for DK",
-		"number": "6"
+		"number": "7"
+	},
+	{
+		"name": "Unholy pvp fix ideas",
+		"number": "1"
 	},
 	{
 		"name": "Frost DK covenants",
 		"number": "1"
-	},
-	{
-		"name": "Unholy pvp fix ideas",
-		"number": "0"
 	},
 	{
 		"name": "\"Maldraxxus Green\" eyes customization",

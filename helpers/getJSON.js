@@ -42,7 +42,7 @@ const getPostTitles = async (url) => {
     }
 };
 
-const runSinglePostTitles= (classObject) => {
+const runPostTitles= (classObject) => {
 
     getPostTitles(classObject.link)
         .then(function (o){
@@ -52,7 +52,7 @@ const runSinglePostTitles= (classObject) => {
         });}
 
 const runMultiPostTitles = () => {
-    classes.forEach(x => runSinglePostTitles(x));
+    classes.forEach(x => runPostTitles(x));
 }
 
 exports.runPostTitles = runMultiPostTitles;

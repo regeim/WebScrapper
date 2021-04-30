@@ -5,7 +5,7 @@
 	},
 	{
 		"name": "Rogue raid utility incoming",
-		"number": "13"
+		"number": "14"
 	},
 	{
 		"name": "9.1 newest build rogue changes - what do you think?",
