@@ -8,9 +8,9 @@ function flatten(arr) {
     }, []);
 }
 
-function loadJSON(callback, className) {
+function loadJSON(callback) {
     let today = new Date().toISOString().slice(0, 10);
-    let fileName = `${className}-${today}.txt`;
+    let fileName = `${today}.txt`;
     console.log(fileName);
     let xobj = new XMLHttpRequest();
     xobj.overrideMimeType('application/json');
@@ -25,48 +25,43 @@ function loadJSON(callback, className) {
     xobj.send(null);
 }
 
-function CreateTableFromJSON(tableJson) {
+function CreateTableFromJSON(tableJson, t) {
     let forums = [];
     let table;
 //    tableJson.forEach((x, i, array) => array[i].class = className);
     forums = tableJson;
 
-    table = document.createElement('table');
-    table.setAttribute("id", 'table-classes');
+    if (t) {
+        table = document.createElement('table');
+        table.setAttribute('id', 'table-classes');
 
-    let col = [];
-    // map to object key, remove duplicates, add put them into a array
-    [...new Set(flatten(forums.map(x => Object.keys(x))))].forEach((x) => col.push(x));
+        let col = [];
+        // map to object key, remove duplicates, add put them into a array
+        [...new Set(flatten(forums.map(x => Object.keys(x))))].forEach((x) => col.push(x));
 
-    let tr;
-    forums.forEach((x, i) => {
-        tr = table.insertRow();
-        col.forEach((y, j) => {
-            let tabCell = tr.insertCell();
-            tabCell.innerHTML = forums[i][col[j]];
+        let tr;
+        forums.forEach((x, i) => {
+            tr = table.insertRow();
+            col.forEach((y, j) => {
+                let tabCell = tr.insertCell();
+                tabCell.innerHTML = forums[i][col[j]];
+            });
         });
+
+        let divContainer = document.getElementById('showData');
+        divContainer.innerHTML = '';
+        divContainer.appendChild(table);
+    }
+
+}
+
+function loadClasses(selectedClasses, t) {
+
+    loadJSON(function (response) {
+        let a = JSON.parse(response);
+        CreateTableFromJSON(a.filter(x => selectedClasses.includes(x.class)), t);
     });
 
-    let divContainer = document.getElementById('showData');
-    divContainer.innerHTML = '';
-    divContainer.appendChild(table);
-
 }
 
-function loadClasses(classJson) {
-    let classes = classJson;
-    creatClassHTML(classes)
-    function creatClassHTML(o) {
-        classData =[];
-        o.forEach(function (x, i ) {loadJSON((response) => concatJson(response, x), x);});
 
-    }
-
-    function concatJson(a, className) {
-        let parsedData = JSON.parse(a);
-        parsedData.forEach((x, i, array) => array[i].class = className)
-        classData =classData.concat(parsedData);
-        CreateTableFromJSON(classData);
-    }
-
-}

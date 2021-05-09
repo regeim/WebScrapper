@@ -1,66 +1,66 @@
 [
   {
-    "name": "General",
+    "name": "general",
     "link": "https://eu.forums.blizzard.com/en/wow/c/community/general",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/community/general-discussion"
   },
   {
-    "name": "Death-knight",
+    "name": "death-knight",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/death-knight",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/death-knight"
   },
   {
-    "name": "Demon-hunter",
+    "name": "demon-hunter",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/demon-hunter",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/demon-hunter"
   },
   {
-    "name": "Druid",
+    "name": "druid",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/druid",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/druid"
   },
   {
-    "name": "Hunter",
+    "name": "hunter",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/hunter",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/hunter"
   },
   {
-    "name": "Mage",
+    "name": "mage",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/mage",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/mage"
   },
   {
-    "name": "Monk",
+    "name": "monk",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/monk",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/monk"
   },
   {
-    "name": "Paladin",
+    "name": "paladin",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/paladin",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/paladin"
   },
   {
-    "name": "Priest",
+    "name": "priest",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/priest",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/priest"
   },
   {
-    "name": "Rogue",
+    "name": "rogue",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/rogue",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/rogue"
   },
   {
-    "name": "Shaman",
+    "name": "shaman",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/shaman",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/shaman"
   },
   {
-    "name": "Warlock",
+    "name": "warlock",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/warlock",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/warlock"
   },
   {
-    "name": "Warrior",
+    "name": "warrior",
     "link": "https://eu.forums.blizzard.com/en/wow/c/classes/warrior",
     "uslink": "https://us.forums.blizzard.com/en/wow/c/classes/warrior"
   }

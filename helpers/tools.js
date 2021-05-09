@@ -1,24 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 
-const saveToFile = (file,jsonData, className) => {
-    let today = new Date().toISOString().slice(0, 10)
-
-//    console.log(__dirname + ' tools.js');
-//    console.log(path.join(__dirname, `../savedFiles/`));
-    file.writeFile(path.join(__dirname, `../public/${className}-${today}.txt`), jsonData, function (err) {
+const saveToFile = (jsonData, i) => {
+    let today = new Date().toISOString().slice(0, 10);
+    let fPath = path.join(__dirname, `../public/${today}.txt`);
+    fs.appendFile(fPath, JSON.stringify(jsonData, null, "\t"), function (err) {
+        console.log(`${fPath}`);
         if (err) {
             console.log(err);
         }
     });
 };
 
+const delFile = () => {
+    let today = new Date().toISOString().slice(0, 10);
+    let fPath = path.join(__dirname, `../public/${today}.txt`);
+    if (fs.existsSync(fPath)) {
+            fs.unlinkSync(fPath);
+            console.log(`${fPath} was deleted`);
+    }
+}
+
 const readFromFile = (file) => {
     return JSON.parse(fs.readFileSync(file));
 };
 
 module.exports = {
-    saveToFile
+    saveToFile,
+    delFile
 };
 
 // console.log(readFromFile('test.txt'));
