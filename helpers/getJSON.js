@@ -57,11 +57,7 @@ const getPostTitles = async (url ,country) => {
 };
 
 
-const saveData = function(dataToSave){
-    tools.saveToFile(dataToSave);
-}
-
-const startRunThenSave = async () => {
+const startRunThenSave = async (fileNumber) => {
     let concatData = [];
     let i = 0;
     for await (const value of classes) {
@@ -82,10 +78,10 @@ const startRunThenSave = async () => {
             })))
         i ++;
         if (i == classes.length) {
-            saveData(concatData);
+            tools.saveToFile(concatData, fileNumber);
         }
     };
 }
 
-// startRunThenSave();
+//startRunThenSave(1);
 exports.runPostTitles = startRunThenSave;
